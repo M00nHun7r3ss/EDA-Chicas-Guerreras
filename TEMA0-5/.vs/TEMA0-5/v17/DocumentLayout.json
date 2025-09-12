@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA0-5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1443F395-E7F7-43A0-A5CF-D869C7FDE581}|TEMA0-5.vcxproj|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA0-5\\TEMA0-5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1443F395-E7F7-43A0-A5CF-D869C7FDE581}|TEMA0-5.vcxproj|solutionrelative:TEMA0-5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\PlantillaJuezNumeroCasos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlantillaJuezNumeroCasos.cpp",
+              "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\PlantillaJuezNumeroCasos.cpp",
+              "RelativeDocumentMoniker": "..\\PlantillaJuezNumeroCasos.cpp",
+              "ToolTip": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\PlantillaJuezNumeroCasos.cpp",
+              "RelativeToolTip": "..\\PlantillaJuezNumeroCasos.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-12T10:39:11.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TEMA0-5.cpp",
+              "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA0-5\\TEMA0-5.cpp",
+              "RelativeDocumentMoniker": "TEMA0-5.cpp",
+              "ToolTip": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA0-5\\TEMA0-5.cpp",
+              "RelativeToolTip": "TEMA0-5.cpp",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAAC0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-12T10:38:50.749Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
