@@ -7,17 +7,10 @@
 #include <fstream>
 #include <vector>
 
-
-// función que resuelve el problema
-TipoSolucion resolver(TipoDatos datos) {
-
-
-}
-
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 void resuelveCaso() {
-    // leer los datos de la entrada
+    // leer los datos de la entrada.
     int n; 
     std::cin >> n;
 
@@ -28,16 +21,24 @@ void resuelveCaso() {
     // · valle -> a > b && b < c
     // · pico -> a < b && c < b
 
-    // tiene que recorrer toda la secuencia para ver sus picos y valles 
-    for (int i = 1; i < n - 1; i++) { // empezamos en el segundo y acabamos en el penultimo
-
+    // almacenamos en un vector la secuencia.
+    std::vector<int> v(n);
+    for (int i = 0; i < n; ++i) {
+        std::cin >> v[i];
     }
 
+    // picos y valles inicialmente a 0.
+    int nValley = 0;
+    int nPeak = 0;
 
-    TipoSolucion sol = resolver(datos);
+    // tiene que recorrer toda la secuencia para ver sus picos y valles.
+    for (int i = 1; i < n - 1; i++) { // empezamos en el segundo y acabamos en el penultimo.
+        if (v[i - 1] > v[i] && v[i] < v[i + 1]) nValley++;
+        if (v[i - 1] < v[i] && v[i + 1] < v[i]) nPeak++;
+    }
+
     // escribir sol
-
-
+    std::cout << nPeak << " " << nValley << std::endl;
 }
 
 int main() {
