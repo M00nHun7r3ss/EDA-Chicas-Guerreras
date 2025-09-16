@@ -3,14 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA1-1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95394E5E-75D0-4921-A3E0-F0393B20744A}|TEMA1-1.vcxproj|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA1-1\\TEMA1-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{95394E5E-75D0-4921-A3E0-F0393B20744A}|TEMA1-1.vcxproj|solutionrelative:TEMA1-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{744C4745-4475-429B-899B-C30E089E8D71}|TEMA1-1.vcxproj|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA1-1\\TEMA1-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{744C4745-4475-429B-899B-C30E089E8D71}|TEMA1-1.vcxproj|solutionrelative:TEMA1-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\PlantillaJuezCentinela.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95394E5E-75D0-4921-A3E0-F0393B20744A}|TEMA1-1.vcxproj|C:\\SOFTWARE\\PROGRAMACION\\MSVSTUDIO2022\\VC\\TOOLS\\MSVC\\14.40.33807\\INCLUDE\\VECTOR||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA1-1 (intento fallido)\\TEMA1-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,33 +17,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "vector",
-              "DocumentMoniker": "C:\\software\\programacion\\MSVStudio2022\\VC\\Tools\\MSVC\\14.40.33807\\include\\vector",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\software\\programacion\\MSVStudio2022\\VC\\Tools\\MSVC\\14.40.33807\\include\\vector",
-              "ToolTip": "C:\\software\\programacion\\MSVStudio2022\\VC\\Tools\\MSVC\\14.40.33807\\include\\vector",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\software\\programacion\\MSVStudio2022\\VC\\Tools\\MSVC\\14.40.33807\\include\\vector",
-              "ViewState": "AQIAAFQHAAAAAAAAAAAUwGAHAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-09-16T10:16:37.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PlantillaJuezCentinela.cpp",
-              "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\PlantillaJuezCentinela.cpp",
-              "RelativeDocumentMoniker": "..\\PlantillaJuezCentinela.cpp",
-              "ToolTip": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\PlantillaJuezCentinela.cpp",
-              "RelativeToolTip": "..\\PlantillaJuezCentinela.cpp",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACoAAAAAAAAA",
+              "Title": "TEMA1-1.cpp",
+              "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA1-1 (intento fallido)\\TEMA1-1.cpp",
+              "RelativeDocumentMoniker": "..\\TEMA1-1 (intento fallido)\\TEMA1-1.cpp",
+              "ToolTip": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA1-1 (intento fallido)\\TEMA1-1.cpp",
+              "RelativeToolTip": "..\\TEMA1-1 (intento fallido)\\TEMA1-1.cpp",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAC4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-16T09:28:27.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T14:14:28.448Z"
             },
             {
               "$type": "Document",
@@ -56,9 +39,9 @@
               "RelativeDocumentMoniker": "TEMA1-1.cpp",
               "ToolTip": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA1-1\\TEMA1-1.cpp",
               "RelativeToolTip": "TEMA1-1.cpp",
-              "ViewState": "AQIAACQAAAAAAAAAAAAUwDAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-16T09:26:35.882Z",
+              "WhenOpened": "2025-09-16T14:11:09.146Z",
               "EditorCaption": ""
             }
           ]

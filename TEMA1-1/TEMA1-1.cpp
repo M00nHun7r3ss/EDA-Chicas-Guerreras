@@ -9,14 +9,17 @@
 
 
 // función que resuelve el problema
-std::string resolver(int i, int n) {
-    // si no se han recorrido y comprobado todos los valores 
-    if (i < n) {
-        return "DESCONOCIDO";
+std::string resolver(bool cond) {
+    std::string r; // resultado
+    // si se cumple la condicion es desconocido
+    if (cond) {
+        r = "DALTON";
     }
     else {
-        return "DALTON";
+        r = "DESCONOCIDOS";
     }
+
+    return r;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -29,30 +32,31 @@ bool resuelveCaso() {
     if (nElems == 0)
         return false;
 
-    // casos DESCONOCIDO (v[i], v[i+1], v[i+2], ...):
-    // si v[i] <= v[i+1] && v[i+1] >= v[i+2]
-    // si v[i] >= v[i+1] && v[i+1] <= v[i+2]
-
-    // 1 <= 2 ES && 2 >= 2 ES -> acaba
-    // 1 <= 2 ES && 2 >= 3 NO -> sigue
-    // 4 >= 3 ES && 3 <= 2 NO -> sigue
-    
-    // leer la cadena y almacenarla.
+    // leer la cadena y almacenarla en el vector v.
     std::vector<int> v(nElems);
     for (int i = 0; i < nElems; ++i) {
         std::cin >> v[i];
     }
 
-    // si se cumplen las condiciones para de leer el caso y directamente pone DESCONOCIDO.
+    bool isDalton = true; // inicialmente asumimos que es dalton.
+    bool isUpward = false; // ascendente -> true; descendente -> false;
+
+    if (v[0] < v[1]) isUpward = true; // si el primero es menor que el segundo iniciamos ascendente.
+
     int i = 0;
-    int n = nElems - 3; // ponemos que busque hasta nElems-2 para que no se salga del vector por lo de v[i+1] v[i+2]
-    while (i < n)
-        //|| v[i] <= v[i + 1] && v[i + 1] >= v[i + 2] || v[i] >= v[i + 1] && v[i + 1] <= v[i + 2]) 
-    {
-        ++i;
+    while (i < nElems - 1 && isDalton) { // va buscando hasta que deje de ser dalton (nElems-1 para que al v[i+1] no se pase).
+
+        // (a, b, c)
+        // si ascendente y a >= b -> NO DALTON
+        // si descendente y a <= b -> NO DALTON
+        if ((isUpward && v[i] >= v[i + 1]) || (!isUpward && v[i] <= v[i + 1])) {
+            isDalton = false;
+        }
+        i++;
     }
 
-    std::string sol = resolver(i, n);
+
+    std::string sol = resolver(isDalton);
 
     // escribir sol
     std::cout << sol << std::endl;
@@ -82,4 +86,3 @@ int main() {
 
     return 0;
 }
-
