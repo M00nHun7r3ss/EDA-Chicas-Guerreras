@@ -27,7 +27,7 @@ bool resuelveCaso() {
     if (nDatos == -1)
         return false;
 
-    // datos en sí
+    // datos en si
     std::vector<int> datos(nDatos);
     for (int i = 0; i < nDatos; i++)
     {

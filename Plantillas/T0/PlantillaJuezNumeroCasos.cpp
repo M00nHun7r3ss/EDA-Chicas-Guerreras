@@ -1,11 +1,10 @@
-// Nombre del alumno .....
-// Usuario del Juez ......
-
+// Denisa Juarranz Berindea
+// EDA-GDV36
 
 #include <iostream>
 #include <iomanip>
 #include <fstream>
-
+#include <vector>
 
 // función que resuelve el problema
 TipoSolucion resolver(TipoDatos datos) {
