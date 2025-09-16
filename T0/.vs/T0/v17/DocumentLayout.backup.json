@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AB8BE6B2-FF1B-4A0D-874F-F8C6AE6C07DE}|T0_7\\T0_7.vcxproj|C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\T0_7\\T0_7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AB8BE6B2-FF1B-4A0D-874F-F8C6AE6C07DE}|T0_7\\T0_7.vcxproj|solutionrelative:T0_7\\T0_7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9C2FDEB-F7AC-430E-844B-88E84B470E79}|T0_6\\T0_6.vcxproj|C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\T0_6\\T0_6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F9C2FDEB-F7AC-430E-844B-88E84B470E79}|T0_6\\T0_6.vcxproj|solutionrelative:T0_6\\T0_6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 299,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "T0_7.cpp",
+              "DocumentMoniker": "C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\T0_7\\T0_7.cpp",
+              "RelativeDocumentMoniker": "T0_7\\T0_7.cpp",
+              "ToolTip": "C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\T0_7\\T0_7.cpp",
+              "RelativeToolTip": "T0_7\\T0_7.cpp",
+              "ViewState": "AgIAABoAAAAAAAAAAAAUwC4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-16T09:45:30.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "T0_6.cpp",
+              "DocumentMoniker": "C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\T0_6\\T0_6.cpp",
+              "RelativeDocumentMoniker": "T0_6\\T0_6.cpp",
+              "ToolTip": "C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\T0_6\\T0_6.cpp",
+              "RelativeToolTip": "T0_6\\T0_6.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-16T09:39:15.176Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

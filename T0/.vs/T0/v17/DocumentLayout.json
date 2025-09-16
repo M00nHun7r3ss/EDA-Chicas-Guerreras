@@ -1,25 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\",
+  "WorkspaceRootPath": "C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3FDAD11-9659-453A-B1C3-5AE83224950E}|T0_4\\T0_4.vcxproj|U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\T0_4\\T0_4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C3FDAD11-9659-453A-B1C3-5AE83224950E}|T0_4\\T0_4.vcxproj|solutionrelative:T0_4\\T0_4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AB8BE6B2-FF1B-4A0D-874F-F8C6AE6C07DE}|T0_7\\T0_7.vcxproj|C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\T0_7\\T0_7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AB8BE6B2-FF1B-4A0D-874F-F8C6AE6C07DE}|T0_7\\T0_7.vcxproj|solutionrelative:T0_7\\T0_7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F00461C9-5422-4102-B26A-CCABDEE6A7A0}|T0_3\\T0_3.vcxproj|U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\T0_3\\T0_3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F00461C9-5422-4102-B26A-CCABDEE6A7A0}|T0_3\\T0_3.vcxproj|solutionrelative:T0_3\\T0_3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{350F382F-9885-47E2-9990-4CB95441079F}|T0_2\\T0_2.vcxproj|U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\T0_2\\T0_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{350F382F-9885-47E2-9990-4CB95441079F}|T0_2\\T0_2.vcxproj|solutionrelative:T0_2\\T0_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|U:\\hlocal\\EDA-Chicas-Guerreras\\Plantillas\\T0\\PlantillaJuezCasosIlimitados.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C7DB20F-647C-4B3D-B796-A1E206890918}|T0_1\\T0_1.vcxproj|U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\T0_1\\T0_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3C7DB20F-647C-4B3D-B796-A1E206890918}|T0_1\\T0_1.vcxproj|solutionrelative:T0_1\\T0_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F9C2FDEB-F7AC-430E-844B-88E84B470E79}|T0_6\\T0_6.vcxproj|C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\T0_6\\T0_6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F9C2FDEB-F7AC-430E-844B-88E84B470E79}|T0_6\\T0_6.vcxproj|solutionrelative:T0_6\\T0_6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,71 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 299,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlantillaJuezCasosIlimitados.cpp",
-              "DocumentMoniker": "U:\\hlocal\\EDA-Chicas-Guerreras\\Plantillas\\T0\\PlantillaJuezCasosIlimitados.cpp",
-              "RelativeDocumentMoniker": "..\\..\\Plantillas\\T0\\PlantillaJuezCasosIlimitados.cpp",
-              "ToolTip": "U:\\hlocal\\EDA-Chicas-Guerreras\\Plantillas\\T0\\PlantillaJuezCasosIlimitados.cpp",
-              "RelativeToolTip": "..\\..\\Plantillas\\T0\\PlantillaJuezCasosIlimitados.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-12T10:00:02.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "T0_4.cpp",
-              "DocumentMoniker": "U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\T0_4\\T0_4.cpp",
-              "RelativeDocumentMoniker": "T0_4\\T0_4.cpp",
-              "ToolTip": "U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\T0_4\\T0_4.cpp",
-              "RelativeToolTip": "T0_4\\T0_4.cpp",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAB0AAAAQAAAA",
+              "Title": "T0_7.cpp",
+              "DocumentMoniker": "C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\T0_7\\T0_7.cpp",
+              "RelativeDocumentMoniker": "T0_7\\T0_7.cpp",
+              "ToolTip": "C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\T0_7\\T0_7.cpp",
+              "RelativeToolTip": "T0_7\\T0_7.cpp",
+              "ViewState": "AgIAABoAAAAAAAAAAAAUwC4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-12T09:47:29.982Z",
+              "WhenOpened": "2025-09-16T09:45:30.412Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "T0_3.cpp",
-              "DocumentMoniker": "U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\T0_3\\T0_3.cpp",
-              "RelativeDocumentMoniker": "T0_3\\T0_3.cpp",
-              "ToolTip": "U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\T0_3\\T0_3.cpp",
-              "RelativeToolTip": "T0_3\\T0_3.cpp",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAVAAAA",
+              "Title": "T0_6.cpp",
+              "DocumentMoniker": "C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\T0_6\\T0_6.cpp",
+              "RelativeDocumentMoniker": "T0_6\\T0_6.cpp",
+              "ToolTip": "C:\\Users\\Denisa\\Desktop\\EDA-Chicas-Guerreras\\T0\\T0_6\\T0_6.cpp",
+              "RelativeToolTip": "T0_6\\T0_6.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-12T09:37:44.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "T0_2.cpp",
-              "DocumentMoniker": "U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\T0_2\\T0_2.cpp",
-              "RelativeDocumentMoniker": "T0_2\\T0_2.cpp",
-              "ToolTip": "U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\T0_2\\T0_2.cpp",
-              "RelativeToolTip": "T0_2\\T0_2.cpp",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-12T09:25:20.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "T0_1.cpp",
-              "DocumentMoniker": "U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\T0_1\\T0_1.cpp",
-              "RelativeDocumentMoniker": "T0_1\\T0_1.cpp",
-              "ToolTip": "U:\\hlocal\\EDA-Chicas-Guerreras\\T0\\T0\\T0_1\\T0_1.cpp",
-              "RelativeToolTip": "T0_1\\T0_1.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-12T09:21:47.568Z",
+              "WhenOpened": "2025-09-16T09:39:15.176Z",
               "EditorCaption": ""
             }
           ]
