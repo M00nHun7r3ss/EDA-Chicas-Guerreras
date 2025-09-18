@@ -7,11 +7,35 @@
 #include <vector>
 
 // función que resuelve el problema
-bool resolver(std::vector<int>& v, int pos) {
+bool resolver(std::vector<int>& datos, int pos) {
 
     //Damos por hecho que es menor desde el principio y vamos confirmando
     bool menor = true;
 
+    //Buscamos el máximo hasta la posición
+    int max = datos[0];
+    for (int i = 0; i < pos + 1; i++) {
+        if (max < datos[i]) {
+            max = datos[i];
+        }
+    }
+
+    //Ahora comprobamos la condicion, buscando que los del lado derecho sean mayores
+    int i = pos + 1;
+
+    //Busqueda por bandera, hasta el final
+    while (i < datos.size() && menor) {
+
+        //Si alguno de los datos del lado derecho es menor que el maximo del lado izquierdo,
+        //no se cumplira la condicion
+        if (max >= datos[i]) {
+
+            menor = false;
+        }
+
+        i++;
+
+    }
 
     return menor;
 }
