@@ -7,13 +7,6 @@
 #include <fstream>
 #include <vector>
 
-
-// función que resuelve el problema
-TipoSolucion resolver(TipoDatos datos) {
-
-
-}
-
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 void resuelveCaso() {
@@ -22,16 +15,15 @@ void resuelveCaso() {
     // leer los datos de la entrada
     std::cin >> n;
 
-    // almacenamos en un vector la secuencia.
-    std::vector<int> v(n);
+    // recorremos valor a valor para ver si es impar o no.
+    int val;
     for (int i = 0; i < n; ++i) {
-        std::cin >> v[i];
+        std::cin >> val;
+        if (val % 2 == 0) { // si es par
+            std::cout << val << " ";
+        }
     }
-
-    TipoSolucion sol = resolver(datos);
-    // escribir sol
-
-
+    std::cout << std::endl;
 }
 
 int main() {

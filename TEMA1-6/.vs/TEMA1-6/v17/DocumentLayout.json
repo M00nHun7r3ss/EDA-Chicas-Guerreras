@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Music\\EDA-Chicas-Guerreras\\TEMA1-6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19B6A9DD-0BD5-4C59-A6D2-FA51830EFA01}|TEMA1-6.vcxproj|C:\\Users\\Usuario\\Music\\EDA-Chicas-Guerreras\\TEMA1-6\\TEMA1-6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{19B6A9DD-0BD5-4C59-A6D2-FA51830EFA01}|TEMA1-6.vcxproj|solutionrelative:TEMA1-6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TEMA1-6.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\EDA-Chicas-Guerreras\\TEMA1-6\\TEMA1-6.cpp",
+              "RelativeDocumentMoniker": "TEMA1-6.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\EDA-Chicas-Guerreras\\TEMA1-6\\TEMA1-6.cpp",
+              "RelativeToolTip": "TEMA1-6.cpp",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-19T12:56:32.201Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
