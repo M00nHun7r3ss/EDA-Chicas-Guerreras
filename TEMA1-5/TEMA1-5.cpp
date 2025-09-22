@@ -1,25 +1,47 @@
 // Carmen Gómez Becerra
 // EDA-GDV29
+// Complejidad cuadratica
 
 #include <iostream>
 #include <fstream>
 #include <vector>
-using namespace std;
 
+// Divide el conjunto de elementos en una parte ordenada y otra desordenada.
+// Toma un elemento de la parte desordenada y lo inserta en la posición correcta en la parte ordenada.
+// Repite este proceso hasta que todos los elementos estén ordenados.
+void insertionSort(std::string &cad, int size) {
+    for (int i = 1; i < size; ++i) {
+        int key = cad[i];
+        int j = i - 1;
 
-bool anagramas(const string& cad1, const string& cad2) {
+        while (j >= 0 && cad[j] > key) {
+            cad[j + 1] = cad[j];
+            j = j - 1;
+        }
+
+        cad[j + 1] = key;
+    }
+}
+
+bool anagramas(const std::string& cad1, const std::string& cad2) {
 
     // al principio asumimos que no es anagrama
 	bool anagrama = false;
+
+    int nCad1 = cad1.length();
+    int nCad2 = cad2.length();
     
     // si ambas cadenas son del mismo tamanio entra al bucle, si no, directamente false.
-    if (cad1.length() == cad2.length()) {
-		// recorre porque tiene que comprobar letra a letra.
-		for (int i = 0; i < cad1.length(); i++)
-		{
-			
-		}
-    		// por cada letra comprobada no sigue leyendo for(while()) y que se salte la pos acertada.
+    if (nCad1 == nCad2) {
+        // listas que seran ordenadas alfabeticamente.
+        std::string auxCad1 = cad1;
+        std::string auxCad2 = cad2;
+
+        // ordena alfabeticamente las dos listas y compara.
+        insertionSort(auxCad1, nCad1);
+        insertionSort(auxCad2, nCad2);
+
+        anagrama = auxCad1 == auxCad2;
     }
 
 	return anagrama;
@@ -29,9 +51,9 @@ bool anagramas(const string& cad1, const string& cad2) {
 // configuración, y escribiendo la respuesta
 void resuelveCaso() {
     // leer los datos de la entrada
-    string word1, word2;
-    cin >> word1 >> word2;
-    cout << (anagramas(word1, word2) ? "SI" : "NO") << endl;
+    std::string word1, word2;
+    std::cin >> word1 >> word2;
+    std::cout << (anagramas(word1, word2) ? "SI" : "NO") << std::endl;
 }
 
 //#define DOMJUDGE

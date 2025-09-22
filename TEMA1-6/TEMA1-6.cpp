@@ -52,20 +52,20 @@ void comparaListados(vector<string> const& eda, vector<string> const& tpv,
     int j;
     int aux = 0;
     // comprueba todos los valores de la primera cadena
-    for (int i = 0; i < eda.size(); ++i){
-		bool ambos = false;
+    for (int i = 0; i < eda.size(); ++i) {
+        bool ambos = false;
         j = aux; // reinicia bucle.
         // cuando encuentra los que sean de ambos vectores para el bucle, aumenta aux y mete en el vector comunes
-		while (j < tpv.size() && !ambos) 
-		{
-			if (eda[i] == tpv[j])
-			{
+        while (j < tpv.size() && !ambos)
+        {
+            if (eda[i] == tpv[j])
+            {
                 ambos = true;
                 comunes.push_back(eda[i]);
                 aux++;
-			}
+            }
             j++;
-		}
+        }
     }
 
     // EDA && !TPV
