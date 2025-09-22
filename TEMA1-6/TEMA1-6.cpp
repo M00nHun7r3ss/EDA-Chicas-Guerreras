@@ -13,6 +13,32 @@
 #include <vector>
 using namespace std;
 
+// busqueda binaria
+bool busquedaBinaria(int a[], int buscado) {
+
+
+    int primero = 0;
+    int ultimo = 100 - 1;
+    bool encontrado = false;
+
+
+    while (primero <= ultimo and !encontrado) {
+        int medio = (primero + ultimo) / 2;
+        if (a[medio] == buscado) {
+            encontrado = true;
+        }
+        else if (buscado < a[medio]) {
+            ultimo = medio - 1;
+        }
+        else {
+            primero = medio + 1;
+        }
+    }
+
+
+    return encontrado;
+}
+
 // A && !B:
 vector<string> diferenciaVectores(vector<string> const A, vector<string> const B)
 {
