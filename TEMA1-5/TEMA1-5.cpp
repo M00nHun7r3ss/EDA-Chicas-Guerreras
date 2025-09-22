@@ -1,6 +1,6 @@
 // Carmen Gómez Becerra
 // EDA-GDV29
-// Complejidad cuadratica
+// Complejidad cuadratica O(n^2): bucles anidados.
 
 #include <iostream>
 #include <fstream>

@@ -1,6 +1,6 @@
 // Carmen Gómez Becerra
 // EDA-GDV29
-
+// Complejidad lineal O(n): el tiempo de ejecucion es proporcional al numero de entradas, se recorre una vez el bucle.
 
 #include <iostream>
 #include <iomanip>

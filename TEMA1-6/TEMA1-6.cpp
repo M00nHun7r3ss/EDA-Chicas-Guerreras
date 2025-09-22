@@ -1,10 +1,10 @@
 // Carmen Gómez Becerra
 // EDA-GDV29
-// Complejidad cuasi-lineal O(n.log n)
-// Cuestion: si no estuvieran ordenados, el menor orden de complejidad seria cuadratica.
-// Esto seria asi porque habria que comprobar todos los elementos de un vector con el otro, no como
-// en este ejercicio que en cuanto se comprueba la condicion necesaria (ambos, tpv&&!eda, eda&&!tpv), se avanza y no se vuelve a mirar los
-// elementos anteriores al que se esta comprobando ahora (variable aux que he usado en el ejercicio).
+// Complejidad lineal. Siendo "n" el eda.size() y "m" el tpv.size() -> O(n + m).
+// El tiempo de ejecucion es proporcional al numero de entradas, se recorre una vez el bucle.
+
+// Cuestion: si no estuvieran ordenados, el menor orden de complejidad seria cuasi lineal O(n*log(n)).
+// Esto seria asi porque habria que ordenarlo antes de hacer las busquedas correspondientes.
 
 #include <iostream>
 #include <iomanip>
@@ -13,92 +13,46 @@
 #include <vector>
 using namespace std;
 
-// busqueda binaria
-bool busquedaBinaria(int a[], int buscado) {
-
-
-    int primero = 0;
-    int ultimo = 100 - 1;
-    bool encontrado = false;
-
-
-    while (primero <= ultimo and !encontrado) {
-        int medio = (primero + ultimo) / 2;
-        if (a[medio] == buscado) {
-            encontrado = true;
-        }
-        else if (buscado < a[medio]) {
-            ultimo = medio - 1;
-        }
-        else {
-            primero = medio + 1;
-        }
-    }
-
-
-    return encontrado;
-}
-
-// A && !B:
-vector<string> diferenciaVectores(vector<string> const A, vector<string> const B)
-{
-    vector<string> vec;
-    int j;
-    int aux = 0;
-    for (int i = 0; i < A.size(); ++i) {
-        bool ambos = false; // va viendo a ver si hay iguales, cuando los haya, para bucle.
-        j = aux; // reinicia bucle.
-        // si encuentra una que sea igual, avanza y no la guarda.
-        // si llega al final y no hay ninguna igual, la guarda.
-        while (j < B.size() && !ambos)
-        {
-            // si hay una igual se la salta 
-            if (A[i] == B[j]) {
-                ambos = true;
-                aux++;
-            }
-
-            // si ha llegado al final sin que haya ninguna igual
-            if ((j == B.size() - 1) && (A[i] != B[j])) {
-                vec.push_back(A[i]);
-            }
-
-            j++;
-        }
-    }
-
-    return vec;
-}
-
 // función que resuelve el problema
 void comparaListados(vector<string> const& eda, vector<string> const& tpv,
     vector<string>& comunes, vector<string>& soloEda, vector<string>& soloTpv) {
 
-    // AMBOS
-    int j;
-    int aux = 0;
-    // comprueba todos los valores de la primera cadena
-    for (int i = 0; i < eda.size(); ++i) {
-        bool ambos = false;
-        j = aux; // reinicia bucle.
-        // cuando encuentra los que sean de ambos vectores para el bucle, aumenta aux y mete en el vector comunes
-        while (j < tpv.size() && !ambos)
-        {
-            if (eda[i] == tpv[j])
-            {
-                ambos = true;
-                comunes.push_back(eda[i]);
-                aux++;
-            }
+    // inicialmente ambos indices empiezan en cero.
+    int i = 0;
+    int j = 0;
+
+    while (i < eda.size() && j < tpv.size()){ // hasta que no lleguen al final ambas listas no se termina.
+
+        // AMBOS : aniadimos al comun y avanzamos ambos.
+	    if (eda[i] == tpv[j]){ 
+            comunes.push_back(eda[i]); // valdria en este caso tanto eda como tpv
+            i++;
+            j++;
+	    }
+        // EDA && !TPV : si la letra de eda esta antes alfabeticamente que la de tpv, mete el numero en soloEDA y avanza eda.
+        else if (eda[i] < tpv[j]){ 
+            soloEda.push_back(eda[i]);
+            i++;
+
+        }
+        // TPV && !EDA : lo mismo de antes pero con tpv.
+        else if (tpv[j] < eda[i]){
+            soloTpv.push_back(tpv[j]);
             j++;
         }
     }
 
-    // EDA && !TPV
-    soloEda = diferenciaVectores(eda, tpv);
+    // si hay un vector menor, el bucle acabara con las i, j del ultimo del menor, por tanto hacemos esto para terminar:
+    while (i < eda.size()) {
+        soloEda.push_back(eda[i]);
+        i++;
+    }
 
-    // TPV && !EDA
-    soloTpv = diferenciaVectores(tpv, eda);
+    while (j < tpv.size())
+    {
+        soloTpv.push_back(tpv[j]);
+        j++;
+    }
 }
 
 
