@@ -1,23 +1,28 @@
 // Carmen Gómez Becerra 
 // EDA - GDV29
-// Complejidad
+// Complejidad lineal O(n): hay que recorrer todo el vector, a mas elems tenga el vector mas tiempo de ejecucion
 
 #include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <vector>
-#include <algorithm>
 
-/*
-bool parcialmenteOrdenado(const std::vector<int>& v, int ini, int fin, int& min, int& max) {
-    // TODO
-}
 
-bool parcialmenteOrdenado(const std::vector<int>& v) {
-    int min, max;
-    return parcialmenteOrdenado(v, 0, v.size(), min, max);
+bool parcialmenteOrdenado(const std::vector<int>& v, int i, int m, int min, int max) {
+
+    // si ha llegado al final, todo perfecto, esta PARCIALMENTE ORDENADO.
+	if (i >= m){
+        return true;
+    } // se pone esto lo primero para que no se salga del vector y no de excepcion
+
+    // si hay algun valor de la izquierda mayor que maxRight || si hay algun valor de la derecha menor que minLeft para y NO PARCIALMENTE ORDENADO.
+    if (v[i] > max || v[i + m] < min){
+        return false;
+    }
+
+    // si nada de esto, otra vuelta del bucle.
+    parcialmenteOrdenado(v, i + 1, m, min, max);
 }
-*/
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
@@ -50,18 +55,15 @@ bool resuelveCaso() {
         if (sec[i + m] > maxRight) maxRight = sec[i + m]; // encuentra el mayor de la derecha.
     }
 
-    // si hay algun valor de la izquierda mayor que maxRight || si hay algun valor de la derecha menor que minLeft para y NO PARCIALMENTE ORDENADO.
+    /*// si hay algun valor de la izquierda mayor que maxRight || si hay algun valor de la derecha menor que minLeft para y NO PARCIALMENTE ORDENADO.
     bool ordenado = true; // asumimos inicialmente k esta ordenado.
     int i = 0;
     while (ordenado && i < m) { // mientras este ordenado va avanzando ambas mitades.
         if (sec[i] > maxRight || sec[i + m] < minLeft) ordenado = false;
         i++;
-    }
+    }*/
 
-    // TODO hay que hacerlo con recursividad.
-
-    std::cout << (ordenado ? "SI" : "NO") << std::endl;
-    //std::cout << (parcialmenteOrdenado(sec) ? "SI" : "NO") << std::endl;
+    std::cout << (parcialmenteOrdenado(sec, 0, m, minLeft, maxRight) ? "SI" : "NO") << std::endl;
     return true;
 }
 
