@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{FD6F97CD-FEB6-4676-94A7-024619E8B276}|TEMA2-03.vcxproj|solutionrelative:TEMA2-03.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\Music\\EDA-Chicas-Guerreras\\TEMA1-3\\TEMA1-3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\Music\\EDA-Chicas-Guerreras\\Plantillas\\T2\\PlantillaParcialmenteOrdenado.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,14 +22,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TEMA1-3.cpp",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\EDA-Chicas-Guerreras\\TEMA1-3\\TEMA1-3.cpp",
-              "RelativeDocumentMoniker": "..\\TEMA1-3\\TEMA1-3.cpp",
-              "ToolTip": "C:\\Users\\Usuario\\Music\\EDA-Chicas-Guerreras\\TEMA1-3\\TEMA1-3.cpp",
-              "RelativeToolTip": "..\\TEMA1-3\\TEMA1-3.cpp",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACYAAAAEAAAA",
+              "Title": "PlantillaParcialmenteOrdenado.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\EDA-Chicas-Guerreras\\Plantillas\\T2\\PlantillaParcialmenteOrdenado.cpp",
+              "RelativeDocumentMoniker": "..\\Plantillas\\T2\\PlantillaParcialmenteOrdenado.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\EDA-Chicas-Guerreras\\Plantillas\\T2\\PlantillaParcialmenteOrdenado.cpp",
+              "RelativeToolTip": "..\\Plantillas\\T2\\PlantillaParcialmenteOrdenado.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-25T17:44:52.659Z",
+              "WhenOpened": "2025-09-25T20:40:05.482Z",
               "EditorCaption": ""
             },
             {
@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "TEMA2-03.cpp",
               "ToolTip": "C:\\Users\\Usuario\\Music\\EDA-Chicas-Guerreras\\TEMA2-03\\TEMA2-03.cpp",
               "RelativeToolTip": "TEMA2-03.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAA8AAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAgAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-25T17:38:41.592Z",
               "EditorCaption": ""
