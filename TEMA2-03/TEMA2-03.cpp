@@ -24,20 +24,26 @@ bool resuelveCaso() {
     int n;
     std::cin >> n;
 
+    // si lee cero de primeras se para.
     if (n == 0) return false;
 
-    while (n != 0)
+    // almacenamos en el vector la secuencia hasta que lea 0.
+    std::vector<int> v;
+    while (n != 0){
+        v.push_back(n); // almacenamos
+        std::cin >> n; // leemos.
+    }
 
-    
     // Diremos que un vector esta parcialmente ordenado si:
     // el valor maximo de su mitad derecha >= que todos los valores de la mitad izquierda
     // &&
     // el valor minimo de su mitad izquierda <= que todos los valores de su mitad derecha
 
-    // almacenamos en un vector la secuencia.
-    
-    
-    
+    // buscamos el valor maximo y minimo.
+    int maxRight = v[v.size()-1]; // mayor de la derecha (ponemos cualquiera de la derecha, y si resulta que hay alguno mayor que se cambie en el bucle)
+    int minLeft = v[0]; // menor de la izquierda.
+
+    // todo punto medio y lo demas recursividad blablabla...
 
     // escribir sol
 
