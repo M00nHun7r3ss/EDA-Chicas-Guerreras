@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\T1\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario_local\\Music\\EDA\\Juez1_5\\Juez1_5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -15,6 +16,28 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{911B8AD1-233F-4927-A9AB-F69E191089FE}|T1_2\\T1_2.vcxproj|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\T1\\T1_2\\T1_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+=======
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Denisa\\Desktop\\Universidad\\Segundo_2\\EDA\\EDA\\Juez1_7\\Juez1_7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5045953-79C0-44A2-8AEA-B8B456E2C18E}|T1_7\\T1_7.vcxproj|C:\\Users\\Denisa\\Desktop\\Universidad\\Tercero\\EDA-Chicas-Guerreras\\T1\\T1_7\\T1_7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D5045953-79C0-44A2-8AEA-B8B456E2C18E}|T1_7\\T1_7.vcxproj|solutionrelative:T1_7\\T1_7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73B2A241-AF27-474A-870B-B2082E987A04}|T1_6\\T1_6.vcxproj|C:\\Users\\Denisa\\Desktop\\Universidad\\Tercero\\EDA-Chicas-Guerreras\\T1\\T1_6\\T1_6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{73B2A241-AF27-474A-870B-B2082E987A04}|T1_6\\T1_6.vcxproj|solutionrelative:T1_6\\T1_6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DFB8319-C341-46E5-887C-EE7A5855A359}|T1_3\\T1_3.vcxproj|C:\\Users\\Denisa\\Desktop\\Universidad\\Tercero\\EDA-Chicas-Guerreras\\T1\\T1_3\\T1_3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0DFB8319-C341-46E5-887C-EE7A5855A359}|T1_3\\T1_3.vcxproj|solutionrelative:T1_3\\T1_3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{702B3C35-9FBF-44E6-A352-9858A66E7DD1}|T1_4\\T1_4.vcxproj|C:\\Users\\Denisa\\Desktop\\Universidad\\Tercero\\EDA-Chicas-Guerreras\\T1\\T1_4\\T1_4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{702B3C35-9FBF-44E6-A352-9858A66E7DD1}|T1_4\\T1_4.vcxproj|solutionrelative:T1_4\\T1_4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{911B8AD1-233F-4927-A9AB-F69E191089FE}|T1_2\\T1_2.vcxproj|C:\\Users\\Denisa\\Desktop\\Universidad\\Tercero\\EDA-Chicas-Guerreras\\T1\\T1_2\\T1_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+>>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{911B8AD1-233F-4927-A9AB-F69E191089FE}|T1_2\\T1_2.vcxproj|solutionrelative:T1_2\\T1_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -34,6 +57,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "Juez1_5.cpp",
               "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA\\Juez1_5\\Juez1_5.cpp",
               "RelativeDocumentMoniker": "..\\..\\EDA\\Juez1_5\\Juez1_5.cpp",
@@ -42,11 +66,51 @@
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-23T09:29:26.028Z",
+=======
+              "Title": "Juez1_7.cpp",
+              "DocumentMoniker": "C:\\Users\\Denisa\\Desktop\\Universidad\\Segundo_2\\EDA\\EDA\\Juez1_7\\Juez1_7.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\Segundo_2\\EDA\\EDA\\Juez1_7\\Juez1_7.cpp",
+              "ToolTip": "C:\\Users\\Denisa\\Desktop\\Universidad\\Segundo_2\\EDA\\EDA\\Juez1_7\\Juez1_7.cpp",
+              "RelativeToolTip": "..\\..\\..\\Segundo_2\\EDA\\EDA\\Juez1_7\\Juez1_7.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-19T14:16:17.854Z",
+>>>>>>> Stashed changes
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+<<<<<<< Updated upstream
+              "DocumentIndex": 2,
+=======
+              "DocumentIndex": 1,
+              "Title": "T1_7.cpp",
+              "DocumentMoniker": "C:\\Users\\Denisa\\Desktop\\Universidad\\Tercero\\EDA-Chicas-Guerreras\\T1\\T1_7\\T1_7.cpp",
+              "RelativeDocumentMoniker": "T1_7\\T1_7.cpp",
+              "ToolTip": "C:\\Users\\Denisa\\Desktop\\Universidad\\Tercero\\EDA-Chicas-Guerreras\\T1\\T1_7\\T1_7.cpp",
+              "RelativeToolTip": "T1_7\\T1_7.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-19T14:15:15.769Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "T1_6.cpp",
+              "DocumentMoniker": "C:\\Users\\Denisa\\Desktop\\Universidad\\Tercero\\EDA-Chicas-Guerreras\\T1\\T1_6\\T1_6.cpp",
+              "RelativeDocumentMoniker": "T1_6\\T1_6.cpp",
+              "ToolTip": "C:\\Users\\Denisa\\Desktop\\Universidad\\Tercero\\EDA-Chicas-Guerreras\\T1\\T1_6\\T1_6.cpp",
+              "RelativeToolTip": "T1_6\\T1_6.cpp",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAABAAAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-19T12:48:16.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+>>>>>>> Stashed changes
               "Title": "T1_4.cpp",
               "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\T1\\T1_4\\T1_4.cpp",
               "RelativeDocumentMoniker": "T1_4\\T1_4.cpp",
@@ -59,20 +123,28 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 1,
+=======
+              "DocumentIndex": 3,
+>>>>>>> Stashed changes
               "Title": "T1_3.cpp",
               "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\T1\\T1_3\\T1_3.cpp",
               "RelativeDocumentMoniker": "T1_3\\T1_3.cpp",
               "ToolTip": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\T1\\T1_3\\T1_3.cpp",
               "RelativeToolTip": "T1_3\\T1_3.cpp",
+<<<<<<< Updated upstream
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+=======
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-17T07:05:50.436Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "T1_2.cpp",
               "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\T1\\T1_2\\T1_2.cpp",
               "RelativeDocumentMoniker": "T1_2\\T1_2.cpp",
@@ -84,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "T1_1.cpp",
               "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\T1\\T1_1\\T1_1.cpp",
               "RelativeDocumentMoniker": "T1_1\\T1_1.cpp",
