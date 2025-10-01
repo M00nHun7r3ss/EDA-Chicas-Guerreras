@@ -7,21 +7,31 @@
 #include <fstream>
 #include <vector>
 
+void findMinMax(int& min, int& max, int m, const std::vector<int> v) {
+    // recorre de i hasta la mitad y de la mitad hasta el final.
+    for (int i = 0; i < m; ++i) {
+        if (v[i] < min) min = v[i]; // encuentra el menor de la izquierda
+        if (v[i + m] > max) max = v[i + m]; // encuentra el mayor de la derecha.
+    }
+}
 
-bool parcialmenteOrdenado(const std::vector<int>& v, int i, int m, int min, int max) {
 
-    // si ha llegado al final, todo perfecto, esta PARCIALMENTE ORDENADO.
+bool parcialmenteOrdenado(const std::vector<int>& v, int i, int m, int& min, int& max) {
+
+    bool ordenado = true; // asumimos que inicialmente ordenado.
+
+    
 	if (i >= m){
-        return true;
     } // se pone esto lo primero para que no se salga del vector y no de excepcion
 
     // si hay algun valor de la izquierda mayor que maxRight || si hay algun valor de la derecha menor que minLeft para y NO PARCIALMENTE ORDENADO.
     if (v[i] > max || v[i + m] < min){
-        return false;
+        ordenado = false;
     }
 
     // si nada de esto, otra vuelta del bucle.
-    parcialmenteOrdenado(v, i + 1, m, min, max);
+    return parcialmenteOrdenado(v, i + 1, m, min, max);
+
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -49,11 +59,8 @@ bool resuelveCaso() {
     // punto medio (par)
     int m = sec.size() / 2;
 
-    // recorre de i hasta la mitad y de la mitad hasta el final.
-    for (int i = 0; i < m; ++i) {
-        if (sec[i] < minLeft) minLeft = sec[i]; // encuentra el menor de la izquierda
-        if (sec[i + m] > maxRight) maxRight = sec[i + m]; // encuentra el mayor de la derecha.
-    }
+    
+    
 
     /*// si hay algun valor de la izquierda mayor que maxRight || si hay algun valor de la derecha menor que minLeft para y NO PARCIALMENTE ORDENADO.
     bool ordenado = true; // asumimos inicialmente k esta ordenado.
