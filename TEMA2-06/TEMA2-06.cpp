@@ -1,6 +1,6 @@
 // Carmen Gómez Becerra
 // EDA - GDV29
-// Complejidad ...
+// Complejidad lineal. O(log n), la busqueda binaria va reduciendo el problema a la mitad en cada iteracion (divide y venceras), mas eficiente que busqueda lineal. 
 
 #include <iostream>
 #include <iomanip>
@@ -8,16 +8,22 @@
 #include <vector>
 
 bool elemento_situado(const std::vector < int >& v, int ini, int fin) {
-    int i = 0;
-    bool situado = false; // inicialmente asumimos que no habra un bien situado.
-    while (i < v.size()) {
 
+    if (ini < fin){ // mientras ini sea menor que fin, actua.
+        // inicialmente asumimos que no habra un bien situado.
+		// va buscando si esta situado quitandose cachos de vector (busqueda binaria)
+        int m = (ini + fin) / 2; // punto medio (se ira actualizando conforme vaya buscando)
+        if (v[m] == m) { // si v[m] == i
+            return true; // hemos acabado.
+        }
+        else if (v[m] > m) { // el valor es mayor que la mitad (se pasa)
+            return elemento_situado(v, ini, m - 1); // mira mitad izquierda
+        }
+        else { // si el valor es menor que la mitad (no llega)
+            return elemento_situado(v, m + 1, fin); // mira mitad derecha.
+        }
     }
-}
-
-// función que resuelve el problema
-bool resolver(const std::vector<int>& v, int ini, int fin) {
-    
+    return false; // si no lo ha encontrado, false.
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -28,7 +34,7 @@ void resuelveCaso() {
     std::cin >> n;
     std::vector<int> sec(n);
     for (int& e : sec) std::cin >> e;
-    std::cout << (resolver(sec, 0, n) ? "SI" : "NO") << std::endl;
+    std::cout << (elemento_situado(sec, 0, n) ? "SI" : "NO") << std::endl;
 }
 
 int main() {
