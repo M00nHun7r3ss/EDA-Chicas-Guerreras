@@ -15,7 +15,7 @@ int minimo(const vector<int>& sec, int ini, int fin) {
 
     if (sec[arraySize - 1] < sec[arraySize - 2]) return sec[arraySize - 1]; // caso valor extremo derecha.
 
-    if (ini < fin && !sec.empty()) { // mientras ini sea menor que fin y no este vacio, actua.
+    if (ini < fin-1 && !sec.empty()) { // mientras ini sea menor que fin y no este vacio, actua.
         int m = (ini + fin) / 2; // punto medio (se ira actualizando conforme vaya buscando)
         if (sec[m] != sec[0] && sec[m] != sec[arraySize-1]) { // si no es ni el primero ni el ultimo del array (mirados anteriormente)
             // va buscando el elemento mas pequenio de la curva concava
