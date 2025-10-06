@@ -10,26 +10,27 @@ using namespace std;
 
 // siendo estrictamente decrecientes hasta un determinado valor a partir del cual son estrictamente crecientes, se pide encontrar el valor del minimo.
 int minimo(const vector<int>& sec, int ini, int fin) {
-    int arraySize = sec.size();
-    if (arraySize == 1 || sec[0] < sec[1]) return sec[0]; // caso valor unico y extremo valor izquierda
+    if (!sec.empty()) { // mientras no este vacio, actua.
+	    int arraySize = sec.size();
 
-    if (sec[arraySize - 1] < sec[arraySize - 2]) return sec[arraySize - 1]; // caso valor extremo derecha.
+        // CASO valor unico + CASO extremo izquierda
+	    if (arraySize == 1 || sec[0] < sec[1]) return sec[0];
 
-    if (ini < fin-1 && !sec.empty()) { // mientras ini sea menor que fin y no este vacio, actua.
-        int m = (ini + fin) / 2; // punto medio (se ira actualizando conforme vaya buscando)
-        if (sec[m] != sec[0] && sec[m] != sec[arraySize-1]) { // si no es ni el primero ni el ultimo del array (mirados anteriormente)
-            // va buscando el elemento mas pequenio de la curva concava
-            if (sec[m] < sec[m - 1] && sec[m] < sec[m + 1]) { // si a la izquierda y a la derecha de la mitad son mayores...
-                return sec[m]; // hemos acabado.
-            }
+        // CASO extremo derecha
+	    if (sec[arraySize - 1] < sec[arraySize - 2]) return sec[arraySize - 1]; // caso valor extremo derecha.
 
-            if (sec[m] < sec[m + 1]) { // si el de la derecha es mayor, mira a la izquierda...
-                return minimo(sec, ini, m);
-            }
+        int m = (ini + fin) / 2; // punto medio
+        // va buscando el elemento mas pequenio de la curva concava
+        // si a la izquierda y a la derecha de la mitad son mayores...
+        if (sec[m] < sec[m - 1] && sec[m] < sec[m + 1]) { 
+            return sec[m]; // hemos acabado.
+        }
 
-            if (sec[m] < sec[m - 1]) { // si el de la izquierda es mayor, mira a la derecha...
-                return minimo(sec, m + 1, fin);
-            }
+        if (sec[m] < sec[m + 1]) { // si el de la derecha es mayor, mira a la izquierda...
+            return minimo(sec, ini, m);
+        }
+        else { // si el de la izquierda es mayor, mira a la derecha...
+            return minimo(sec, m + 1, fin);
         }
     }
     return 0; // si no lo ha encontrado, false (no sale nunca este caso).
