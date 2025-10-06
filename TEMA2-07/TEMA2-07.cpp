@@ -11,26 +11,21 @@ using namespace std;
 // siendo estrictamente decrecientes hasta un determinado valor a partir del cual son estrictamente crecientes, se pide encontrar el valor del minimo.
 int minimo(const vector<int>& sec, int ini, int fin) {
     if (!sec.empty()) { // mientras no este vacio, actua.
-	    int arraySize = sec.size();
 
-        // CASO valor unico + CASO extremo izquierda
-	    if (arraySize == 1 || sec[0] < sec[1]) return sec[0];
-
-        // CASO extremo derecha
-	    if (sec[arraySize - 1] < sec[arraySize - 2]) return sec[arraySize - 1]; // caso valor extremo derecha.
-
-        int m = (ini + fin) / 2; // punto medio
-        // va buscando el elemento mas pequenio de la curva concava
-        // si a la izquierda y a la derecha de la mitad son mayores...
-        if (sec[m] < sec[m - 1] && sec[m] < sec[m + 1]) { 
-            return sec[m]; // hemos acabado.
+        // se busca el minimo cuando el rango del intervalo es 1.
+        if ((fin-ini) == 1) {
+            return sec[ini];
         }
+        else{
+	        int m = (ini + fin) / 2; // punto medio
 
-        if (sec[m] < sec[m + 1]) { // si el de la derecha es mayor, mira a la izquierda...
-            return minimo(sec, ini, m);
-        }
-        else { // si el de la izquierda es mayor, mira a la derecha...
-            return minimo(sec, m + 1, fin);
+            // si el valor en el punto medio es mayor que en el anterior...
+	        if (sec[m] > sec[m - 1]){
+	            return minimo(sec, ini, m); // miramos por la izquierda
+	        }
+	        else{
+	            return minimo(sec, m, fin);
+	        }
         }
     }
     return 0; // si no lo ha encontrado, false (no sale nunca este caso).

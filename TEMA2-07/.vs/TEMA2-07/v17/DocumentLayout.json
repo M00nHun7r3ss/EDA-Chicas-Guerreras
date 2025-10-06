@@ -7,7 +7,10 @@
       "RelativeMoniker": "D:0:0:{CB575975-3F05-4705-B571-263738C48450}|TEMA2-07.vcxproj|solutionrelative:TEMA2-07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\Plantillas\\T2\\PlantillaCurvaConcava.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\AppData\\Local\\Temp\\Rar$DI00.625\\TEMA2-07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA2-10.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -19,7 +22,7 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\software\\programacion\\MSVStudio2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB575975-3F05-4705-B571-263738C48450}|TEMA2-07.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.39.33519\\INCLUDE\\VECTOR||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\Plantillas\\T2\\PlantillaCurvaConcava.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,24 +32,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "TEMA2-07.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\AppData\\Local\\Temp\\Rar$DI00.625\\TEMA2-07.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\Rar$DI00.625\\TEMA2-07.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\AppData\\Local\\Temp\\Rar$DI00.625\\TEMA2-07.cpp",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\Rar$DI00.625\\TEMA2-07.cpp",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-06T19:07:14.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "vector",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
               "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\vector",
-              "ViewState": "AQIAAFsHAAAAAAAAAAAqwG4HAAAAAAAA",
+              "ViewState": "AQIAADwHAAAAAAAAAAAMwE0HAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-10-06T17:30:07.323Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "vector",
               "DocumentMoniker": "C:\\software\\programacion\\MSVStudio2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\include\\vector",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\software\\programacion\\MSVStudio2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\include\\vector",
@@ -57,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "vector",
               "DocumentMoniker": "C:\\software\\programacion\\MSVStudio2022\\VC\\Tools\\MSVC\\14.40.33807\\include\\vector",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\software\\programacion\\MSVStudio2022\\VC\\Tools\\MSVC\\14.40.33807\\include\\vector",
@@ -68,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TEMA2-10.cpp",
               "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA2-10.cpp",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA2-10.cpp",
@@ -79,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "PlantillaCurvaConcava.cpp",
               "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\Plantillas\\T2\\PlantillaCurvaConcava.cpp",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\usuario_local\\Music\\EDA-Chicas-Guerreras\\Plantillas\\T2\\PlantillaCurvaConcava.cpp",
@@ -96,7 +112,7 @@
               "RelativeDocumentMoniker": "TEMA2-07.cpp",
               "ToolTip": "C:\\Users\\Usuario\\Music\\EDA-Chicas-Guerreras\\TEMA2-07\\TEMA2-07.cpp",
               "RelativeToolTip": "TEMA2-07.cpp",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB0AAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-10-03T10:03:13.951Z",
               "EditorCaption": ""
