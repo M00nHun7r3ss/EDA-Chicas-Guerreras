@@ -8,15 +8,31 @@ using namespace std;
 
 bool anagramas(const string& cad1, const string& cad2) {
     
-    //Damos por hecho que no es un anagrama
+    //Damos por hecho que no es anagrama
     bool anagrama = false;
+    //Palabra auxiliar, para poder modificarla
+    string palabra = cad2;
 
-    //vamos recorriendo ambas cadenas simultaneamente
-    int i = 0, j = 0;
-    while (i < cad1.size() && j < cad2.size())
-    {
+    for (int i = 0; i < cad1.length(); i++) {
+        int j = 0;
+        //Vamos a buscar las letras de cad1 en cad2 
+        while (j < palabra.length() && palabra[j] != cad1[i]) {
+
+            j++;
+        }
+
+        //Si la encuentra la borra, y resetea la búsqueda
+        if (palabra[j] == cad1[i] && palabra.length() > 1) {
+            palabra.erase(palabra.begin() + j);
+        }
+        else if (palabra[j] == cad1[i] && palabra.length() == 1)
+        {
+            anagrama = true;
+        }
 
     }
+
+    return anagrama;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
