@@ -9,11 +9,29 @@
 using namespace std;
 
 // función que resuelve el problema
-int min(const vector<int>& sec, int ini, int fin, int min, int c) {
+int minimo(const vector<int>& sec, int ini, int fin, int min, int c) {
 
-    // si c == n y este es menor que la mitad
-    if (c == sec.size() - 1 && min < sec[m]) {
+    if(!sec.empty()) { // si no es vacio
+        int m = (ini + fin) / 2;
 
+        // si el minimo es mayor que el elemento de la mitad.
+        if (min > sec[m]) {
+            // lo reasignamos y le ponemos un valor mas pequeño
+            min = sec[m]; 
+
+            if (c >= sec.size()-1) { // si hemos comprobado todo
+                return min;
+            }
+            else if (c < (sec.size() - 1) / 2) { // si c esta antes que la mitad del array, busca por la izquierda
+                c++;
+                return minimo(sec, ini, m, min, c); // mira mitad izquierda
+            }
+            else { // busca por la derecha
+                c++;
+                return minimo(sec, m + 1, fin, min, c); // mira mitad derecha.
+            }
+	        
+        }
     }
 }
 
@@ -26,7 +44,7 @@ bool resuelveCaso() {
     if (n == 0) return false;
     vector<int> sec(n);
     for (int& e : sec) cin >> e;
-    cout << min(sec, 0, n, min, c) << endl;
+    cout << minimo(sec, 0, n, INT_MAX, 0) << endl;
     return true;
 }
 
