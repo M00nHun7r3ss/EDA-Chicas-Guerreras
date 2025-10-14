@@ -3,12 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA4-1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{96C6958F-2FF7-4140-9AFB-ED5E1E054DBA}|TEMA4-1.vcxproj|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA4-1\\TEMA4-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{96C6958F-2FF7-4140-9AFB-ED5E1E054DBA}|TEMA4-1.vcxproj|solutionrelative:TEMA4-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{96C6958F-2FF7-4140-9AFB-ED5E1E054DBA}|TEMA4-1.vcxproj|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA4-1\\Set.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{96C6958F-2FF7-4140-9AFB-ED5E1E054DBA}|TEMA4-1.vcxproj|solutionrelative:Set.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96C6958F-2FF7-4140-9AFB-ED5E1E054DBA}|TEMA4-1.vcxproj|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA4-1\\TEMA4-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{96C6958F-2FF7-4140-9AFB-ED5E1E054DBA}|TEMA4-1.vcxproj|solutionrelative:TEMA4-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA4-5\\TEMA4-5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +21,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "TEMA4-5.cpp",
+              "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA4-5\\TEMA4-5.cpp",
+              "RelativeDocumentMoniker": "..\\TEMA4-5\\TEMA4-5.cpp",
+              "ToolTip": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA4-5\\TEMA4-5.cpp",
+              "RelativeToolTip": "..\\TEMA4-5\\TEMA4-5.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-14T14:53:18.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Set.h",
               "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA4-1\\Set.h",
               "RelativeDocumentMoniker": "Set.h",
               "ToolTip": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA4-1\\Set.h",
               "RelativeToolTip": "Set.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAcwEwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-10-14T14:04:56.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TEMA4-1.cpp",
               "DocumentMoniker": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA4-1\\TEMA4-1.cpp",
               "RelativeDocumentMoniker": "TEMA4-1.cpp",
               "ToolTip": "C:\\Users\\usuario_local\\Music\\EDA-Chicas-Guerreras\\TEMA4-1\\TEMA4-1.cpp",
               "RelativeToolTip": "TEMA4-1.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAIAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-10-14T13:34:10.083Z",
               "EditorCaption": ""

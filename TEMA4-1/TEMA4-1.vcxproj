@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Set.cpp" />
     <ClCompile Include="TEMA4-1.cpp" />
   </ItemGroup>
   <ItemGroup>
