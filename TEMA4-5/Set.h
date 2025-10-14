@@ -131,19 +131,37 @@ public:
         // el set a rellenar y retornar.
         Set<T> setR;
 
-        // mira los elementos que faltan de set1 en setreturn recorriendo el array.
-        for (int i = 0; i < this->nelems; i++) {
-            // si setReturn no contiene el elemento actual de set 1...
+        // inicialmente ambos indices empiezan en cero.
+        int i = 0;
+        int j = 0;
+        
+        // hasta que no lleguen al final ambas listas no se termina.
+        while (i < this->nelems && j < other.nelems) { 
+
+            // si setR no tiene el elemento actual de set1.
             if (!setR.contains(this->array[i])) {
-                setR.add(this->array[i]); // ... lo aniade.
+                // lo aniade.
+                setR.add(this->array[i]);
+                i++;
+                
+            }
+            // si setR no tiene el elemento actual de set2.
+            else if (!setR.contains(other.array[j])) {
+                // lo aniade.
+                setR.add(other.array[j]);
+                j++;
             }
         }
 
-        // lo mismo que antes pero con set2.
-        for (int i = 0; i < other.nelems; i++) {
-            if (!setR.contains(other.array[i])) {
-                setR.add(other.array[i]);
-            }
+        // si hay un vector menor, el bucle acabara con las i, j del ultimo del menor, por tanto hacemos esto para terminar:
+        while (i < this->nelems && !setR.contains(this->array[i])) {
+            setR.add(this->array[i]);
+            i++;
+        }
+
+        while (j < other.nelems && !setR.contains(other.array[j])) {
+            setR.add(other.array[j]);
+            j++;
         }
 
         return setR;
@@ -247,11 +265,9 @@ protected:
 
 template <class T>
 ostream& operator<<(ostream& out, Set<T> const& set) {
-    out << "{";
     for (int i = 0; i < set.nelems - 1; i++)
-        out << set.array[i] << ",";
+        out << set.array[i] << " ";
     if (set.nelems > 0) out << set.array[set.nelems - 1];
-    out << "}";
     return out;
 }
 
