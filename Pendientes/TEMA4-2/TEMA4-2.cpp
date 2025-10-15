@@ -5,12 +5,20 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include "horas.h"
 
+// metodo que gestiona el output de cada hora
+void resuelveHora(Horas* h){
 
-// función que resuelve el problema
-TipoSolucion resolver(TipoDatos datos) {
+    // TODO lo has hecho mal porque aun no has leido lo que hay abajo, recuerda.
+    if (!h->correctDate()){
+        std::cout << "ERROR";
+    }
+    else if () {
+	    
+    }
 
-
+    std::endl;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -21,12 +29,20 @@ bool resuelveCaso() {
 
     std::cin >> n >> m;
 
-    if (caso especial)
+    // El numero de trenes que sale de la estacion es siempre mayor que cero y menor que 1000.
+    // La entrada termina con 0 0
+    if (((n <= 0) || (n > 1000)) && m <= 0)
         return false;
 
-    TipoSolucion sol = resolver(datos);
+    // crea un nuevo Horas.
+    Horas* t = new Horas(0, 0, 0); 
 
-    // escribir sol
+    for (int i = 0; i < n; ++i){
+        std::cin >> t; // lee
+        resuelveHora(t);
+    }
+
+    if ()
 
     return true;
 

@@ -3,27 +3,23 @@
 
 // TAD Fecha representado como <dia,mes,año> con POO (encapsulación+privacidad)
 
-class horas {
-private:
-	int _horas;
-	int _minutos;
-	int _segundos;
-
-	bool correctDate() const;
+class Horas {
 
 public:
-	horas(int h, int m, int s); // throws Error
-	horas(const horas& date);
+	int horas;
+	int minutos;
+	int segundos;
 
-	bool operator<(const Date2& other) const;
+	Horas(int h, int m, int s); // throws Error
+	Horas(const Horas* date);
 
-	friend ostream& operator<<(ostream& out, const Date2& d);
-	friend std::istream& operator>>(std::istream& in, const Date2& h);
+	bool operator<(const Horas& other) const;
 
-	// getters
-	inline int getHoras() { return _horas; }
-	inline int getMinutos() { return _minutos; }
-	inline int getSegundos() { return  _segundos; }
+	friend ostream& operator<<(ostream& out, const Horas* d);
+	friend istream& operator>>(istream& in, Horas* h);
+
+	bool correctDate() const;
+private:
 };
 #endif /* DATE2_H_ */
 

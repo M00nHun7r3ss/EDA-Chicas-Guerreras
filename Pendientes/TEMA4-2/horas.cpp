@@ -4,31 +4,37 @@ using namespace std;
 #include "horas.h"
 
 
-horas::horas(int h, int m, int s) : _horas(h), _minutos(m), _segundos(s) { //throws domain_error
+Horas::Horas(int h, int m, int s) : horas(h), minutos(m), segundos(s) { //throws domain_error
 	if (!correctDate()) throw domain_error("Hora incorrecta");
 }
 
-horas::horas(const horas& h) : _horas(), month(date.month), year(date.year) {
+Horas::Horas(const Horas& h) : horas(h.horas), minutos(h.minutos), segundos(h.segundos) {
 }
 
-bool Date2::operator<(const Date2& other) const {
-	if (year < other.year) return true;
-	else if (year > other.year) return false;
-	else if (month < other.month) return true;
-	else if (month > other.month) return false;
-	else return day < other.day;
+bool Horas::operator<(const Horas& other) const
+{
+	if (horas < other.horas) return true;
+	else if (horas > other.horas) return false;
+	else if (minutos < other.minutos) return true;
+	else if (minutos > other.minutos) return false;
+	else return segundos < other.segundos;
 }
 
+// Funciones externas a la clase
 
-/*void Date2::print() const {
-	cout << day << "/" << month << "/" << year << endl;
-}*/
-
-
-// Función externa a la clase
-ostream& operator<<(ostream& out, const Date2& d) {
-	out << d.day << "/" << d.month << "/" << d.year;
+ostream& operator<<(ostream& out, const Horas& h) {
+	out << h.horas << ":" << h.minutos << ":" << h.segundos << endl;
 	return out;
+}
+
+std::istream& operator>>(istream& in, Horas& h){
+	in >> h.horas;
+	in.ignore(1, ':');
+	in >> h.minutos;
+	in.ignore(1, ':');
+	in >> h.segundos;
+
+	return in;
 }
 
 
@@ -37,10 +43,10 @@ ostream& operator<<(ostream& out, const Date2& d) {
 // (0 <= horas <= 23)
 // (0 <= minutos <= 59)
 // (0 <= segundos <= 59)
-bool horas::correctDate() const {
+bool Horas::correctDate() const {
 	bool correct;
 
-	if ((_horas < 0) || (_horas > 23) || (_minutos < 0) || (_minutos > 59) || (_segundos < 0) || (_segundos > 59)) correct = false;
+	if ((horas < 0) || (horas > 23) || (minutos < 0) || (minutos > 59) || (segundos < 0) || (segundos > 59)) correct = false;
 	else correct = true;
 
 	return correct;
