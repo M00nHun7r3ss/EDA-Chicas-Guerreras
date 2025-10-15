@@ -16,7 +16,10 @@ TipoSolucion resolver(TipoDatos datos) {
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 bool resuelveCaso() {
-    // leer los datos de la entrada
+    int n, // numero de trenes de la estacion
+		m; // horas a consultar
+
+    std::cin >> n >> m;
 
     if (caso especial)
         return false;
