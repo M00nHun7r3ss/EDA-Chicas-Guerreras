@@ -1,6 +1,38 @@
 ﻿  TEMA4-5.cpp
-C:\Users\usuario_local\Music\EDA-Chicas-Guerreras\TEMA4-5\Set.h(69,22): warning C4244: '=': conversión de '__int64' a 'int'; posible pérdida de datos
-C:\Users\usuario_local\Music\EDA-Chicas-Guerreras\TEMA4-5\Set.h(54,14): warning C4101: 'found': variable local sin referencia
-C:\Users\usuario_local\Music\EDA-Chicas-Guerreras\TEMA4-5\Set.h(101,13): warning C4101: 'pos': variable local sin referencia
-C:\Users\usuario_local\Music\EDA-Chicas-Guerreras\TEMA4-5\Set.h(100,14): warning C4101: 'found': variable local sin referencia
-  TEMA4-5.vcxproj -> C:\Users\usuario_local\Music\EDA-Chicas-Guerreras\TEMA4-5\x64\Debug\TEMA4-5.exe
+C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\Set.h(69,22): warning C4244: '=': conversión de '__int64' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "TEMA4-5.cpp")
+  C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\Set.h(69,22):
+  el contexto de creación de instancias de la plantilla (el más antiguo primero) es
+  	C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\TEMA4-5.cpp(15,14):
+  	Vea la referencia a la creación de una instancia de clase plantilla "Set<int>" que se está compilando
+  	C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\Set.h(53,10):
+  	al compilar la función del miembro clase plantilla "void Set<int>::add(const T &)"
+          with
+          [
+              T=int
+          ]
+  		C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\TEMA4-5.cpp(21,27):
+  		vea la primera referencia a “Set<int>::add” en “resuelveCaso”
+  
+C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\Set.h(54,14): warning C4101: 'found': variable local sin referencia
+  (compilando archivo de origen "TEMA4-5.cpp")
+  
+C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\Set.h(101,13): warning C4101: 'pos': variable local sin referencia
+  (compilando archivo de origen "TEMA4-5.cpp")
+  C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\Set.h(101,13):
+  el contexto de creación de instancias de la plantilla (el más antiguo primero) es
+  	C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\Set.h(99,10):
+  	al compilar la función del miembro clase plantilla "bool Set<int>::contains(const T &) const"
+          with
+          [
+              T=int
+          ]
+  		C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\Set.h(181,17):
+  		vea la primera referencia a “Set<int>::contains” en “Set<int>::operator &&”
+  		C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\TEMA4-5.cpp(29,54):
+  		vea la primera referencia a “Set<int>::operator &&” en “resuelveCaso”
+  
+C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\Set.h(100,14): warning C4101: 'found': variable local sin referencia
+  (compilando archivo de origen "TEMA4-5.cpp")
+  
+  TEMA4-5.vcxproj -> C:\Users\Usuario\Music\EDA-Chicas-Guerreras\Pendientes\TEMA4-5\x64\Debug\TEMA4-5.exe
