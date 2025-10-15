@@ -41,8 +41,8 @@ void resuelveCaso()
 	for (int& e : v) cin >> e;
 
 	// Llamada a la función resolver
-	cout << resolver(v, 0, n) << endl;
 	// Mostrar el resultado
+	cout << resolver(v, 0, n) << endl;
 }
 
 

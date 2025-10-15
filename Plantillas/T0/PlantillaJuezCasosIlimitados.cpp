@@ -18,17 +18,21 @@ TipoSolucion resolver(TipoDatos datos) {
 // configuración, y escribiendo la respuesta
 bool resuelveCaso() {
     // leer los datos de la entrada
+    int n;
+    cin >> n;
     
-    if (! std::cin)
+    if (!std::cin)
         return false;
     
+    vector<int> v(n);
+    for (int& e : v) cin >> e;
     TipoSolucion sol = resolver(datos);
-    
-    // escribir sol
-    
+
+    // Llamada a la función resolver
+    // Mostrar el resultado
+    cout << resolver(v, 0, n) << endl;
     
     return true;
-    
 }
 
 int main() {
