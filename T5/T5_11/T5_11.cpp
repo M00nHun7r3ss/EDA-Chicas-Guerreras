@@ -1,3 +1,6 @@
+// Denisa Juarranz Berindea
+// EDA-GDV36
+
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -5,67 +8,97 @@
 #include "list_eda.h"
 using namespace std;
 
-vector<char> extraerLista(list<char>& lista, int pos, int lon) {
-	vector<char> segmento(lon);
-	list<char> aux;
-	int elemPrincipio = 0;
-	for (int i = 0; i < pos; i++) {
-		aux.push_back(lista.front());
-		elemPrincipio++;
-		lista.pop_front();
-	}
 
-	for (int j = 0; j < lon; j++)
+
+/*
+	Complejidad temporal:
+	Dado que los bucles for tienen distintas complejidades (O(pos), O(length), O(pos - k),
+	vamos a tomar el peor caso y es que todas ellas, como maximo pueden ser nDatos,
+	es decir, el numero total de datos de la lista, por tanto, la complejidad sera O(nDatos)
+
+	Complejidad espacial:
+	Y dado que solo se crean algunos iteradores auxiliares, pero no listas nuevas,
+	el espacio se mantiene constante con una complejidad O(1), pero, dado que creamos un vector
+	para almacenar el segmento de longitud length, la complejidad sera O(length).
+
+*/
+template <typename T>
+void adelantar_segmento(list<T>& l, int pos, int length, int k) {
+	//dado que vamos a usar mucho el tamanio, lo guardamos en una variable auxiliar
+	int nDatos = l.size(); //Complejidad O(1)
+
+	//Si la posicion de origen || posicion destino del segmento no es valida || la lista esta vacia -> Complejidad O(1)|| si lon = 0 || k = 0,
+	   //la operacion no tendra efecto
+	if (pos >= nDatos || l.empty() || length <= 0 || k <= 0) return;
+
+    //Veremos cuantos datos coger
+	//Si la longitud de la cadena pedida desde la posicion inicial supera la longitud total de la lista
+    if (pos + length > nDatos)
+    {
+        //ajustaremos la longitud pedida
+        length = nDatos - pos;
+    }
+
+    //Y volvemos a comprobar la longitud, por si acaso
+    if (length <= 0) return;
+
+    //Vamos a buscar el nodo de la posicion buscada,
+    //desde donde vamos a mover el segmento pedido
+    auto it_inicio_seg = l.begin();
+    //Lo avanzamos hasta la posicion pos
+    //Complejidad O(pos)
+    for (int i = 0; i < pos; i++)
+    {
+		it_inicio_seg++;
+    }
+    //De esta manera dejamos el principio de lista "almacenado",
+    //para trabajar luego a la hora de recolocarlo
+
+	//Vamos a tener un iterador al final del segmento tambien,
+	//para tener el segmento acotado
+	auto it_fin_seg = it_inicio_seg;
+	//Lo avanzamos hasta la posicion pos
+	//Complejidad O(length)
+	for (int i = 0; i < length; i++)
 	{
-		segmento[j] = lista.front();
-		lista.pop_front();
+		it_fin_seg++;
 	}
 
-	for (int k = 0; k < elemPrincipio; k++)
-	{
-		lista.push_front(aux.back());
-		aux.pop_back();
-	}
 
-	return segmento;
-}
+    //Guardaremos el segmento en un vector auxiliar
+	//Avanzaremos con un iterador auxiliar a lo largo del segmento
+	//segun lo vayamos guardando, para guardar el elemento concreto
+    //Complejidad O(length)
+    vector<T> segmento;
+    for (auto it_aux = it_inicio_seg; it_aux != it_fin_seg; it_aux++)
+    {
+        segmento.push_back(*it_aux);
+    }
 
-void insertarLista(list<char>& lista, int pos, vector<char>segmento) {
+    //Ahora borramos los elementos de la lista 
+    //it_fin_seg va avanzando a la par que borra
+	it_fin_seg = l.erase(it_inicio_seg, it_fin_seg);
 
-	list<char>::iterator it = lista.begin();
-	for (int i = 0; i < pos; i++)
-	{
-		it++;
-	}
+	//Calculamos donde toca la nueva posicion
+	int nuevaPos = pos - k;
+	if (nuevaPos < 0) nuevaPos = 0;
 
+    //Ahora buscamos la posicion final desde donde empezara el segmento
+    auto posFinal_segmento = l.begin();
+    //Lo avanzamos desde el inicio hasta la posicion buscada
+    //Complejidad O(pos - k)
+    for (int i = 0; i < nuevaPos; i++)
+    {
+        posFinal_segmento++;
+    }
+
+	//Insertamos el segmento aqui (lo tenemos guardado en un vector)
 	for (int i = 0; i < segmento.size(); i++)
 	{
-
-		lista.insert(it, segmento[i]);
+		l.insert(posFinal_segmento, segmento[i]);
 	}
-
 }
 
-// función que resuelve el problema
-void resolver(list<char>& lista, int n, int pos, int lon, int k) {
-
-	//Se hace cuando: no esté vacía, origen correcto, destino correcto
-	if (n != 0 && k != 0 && lon != 0 && pos < n && pos - k >= 0)
-	{
-		//Si además, se da el caso de que el segmento se sale de la lista
-		if (pos + lon > n) {
-			lon = n - pos;
-		}
-
-		//La nueva posición en la que se insertará el segmento será pos - k;
-		int nuevaPos = pos - k;
-		//Insertamos el segmento extraído en la nueva posición
-		insertarLista(lista, nuevaPos, extraerLista(lista, pos, lon));
-
-	}
-	//else no hace nada
-
-}
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
@@ -85,7 +118,7 @@ void resuelveCaso()
 		l.push_back(e);
 	}
 
-	resolver(l, n, pos, length, k);
+	adelantar_segmento(l, pos, length, k);
 
 	// Le damos una vuelta para comprobar que la lista está bien formada
 	for (int i = 0; i < l.size(); ++i) {
