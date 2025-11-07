@@ -9,7 +9,7 @@ using namespace std;
 
 template <class T>
 bool resolver(bintree<T> const& tree) {
-    
+
     //Si no hay arbol, no seguimos
     if (tree.empty()) return;
 
@@ -19,7 +19,7 @@ bool resolver(bintree<T> const& tree) {
     }
 
     //Ahora comprobaremos cada lado, por separado
-     
+
     int root = tree.root();
     //izquierda
     resolver(tree.left());
