@@ -8,36 +8,44 @@
 using namespace std;
 
 template <class T>
-int resolver(bintree<T> const& tree) {
+/*
+ Complejidad: Dado que recorre una unica vez todos los nodos del arbol, la complejidad sera O(n),
+ siendo n la cantidad de nodos totales del arbol
+ */
+int resolver(bintree<T> const& tree, int &diametro) {
 
-    //Si no hay arbol, no seguimos
-    if (tree.empty()) return;
+    //Si no hay arbol, no seguimos. No hay camino
+    if (tree.empty()) return 0;
 
-    //Si hay derecha e izquierda vacías, no seguimos
-    if (tree.left().empty() && tree.right().empty()) {
-        return false;
-    }
+    //Ahora comprobaremos cada lado, por separado, calculando sus diametros
+    int diametroIzqda = resolver(tree.left(), diametro);
+    int diametroDcha = resolver(tree.right(), diametro);
 
-    //Ahora comprobaremos cada lado, por separado
+    // El camino mas largo que pasa por este nodo es la suma de los diametros de cada lado y la raiz
+    int caminoActual = diametroIzqda + diametroDcha + 1;
 
-    int root = tree.root();
-    //izquierda
-    resolver(tree.left());
+    // Si este camino es más largo que el mejor que teníamos, actualizamos
+    diametro = max(diametro, caminoActual);
 
-    //derecha
-    resolver(tree.right());
-
+    // Devolvemos la rama mas larga (teniendo en cuenta el nodo actual) de caa a recursividad
+	return 1 + max(diametroIzqda, diametroDcha);
 }
-
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 void resuelveCaso() {
     // leer los datos de la entrada
-    bintree<int> tree;
-    tree = leerArbol(-1);
+    bintree<char> tree;
+    tree = leerArbol('.');
 
-    cout << resolver(tree) << endl;
+    //El diametro inicialmente es 0
+    int diametro = 0;
+
+    //Resolvemos, pasando el diametro por referencia, para que se vaya modificando sobre la marcha
+    resolver(tree, diametro);
+
+    //Escribimos la solucion
+    cout << diametro << endl;
 }
 
 

@@ -8,25 +8,73 @@
 using namespace std;
 
 template <class T>
-bool resolver(bintree<T> const& tree) {
-    
-    //Si no hay arbol, no seguimos
-    if (tree.empty()) return;
+// Buscar el valor minimo en un arbol
+/*
+ Complejidad: Recorrera solo una rama del arbol, pero dado que todo
+ el arbol puede estar en un solo lado, la complejidad sera O(n),
+ siendo n la cantidad de nodos totales del arbol
+ */
+int minimo(bintree<T> const& tree)
+{
+    //Si no hay arbol, dara error
+    if (tree.empty()) throw domain_error("Empty Tree");
+    //Si el izquierdo esta vacio, la raiz es la mas pequenia
+    if (tree.left().empty()) return tree.root();
+    //Si no, sigue avanzando
+    return minimo(tree.left());
 
-    //Si hay derecha e izquierda vacías, no seguimos
-    if (tree.left().empty() && tree.right().empty()) {
+    //El objetivo es llegar al nodo inferior mas a la izquierda
+}
+
+template <class T>
+// Buscar el valor maximo en un arbol
+/*
+ Complejidad: Recorrera solo una rama del arbol, pero dado que todo
+ el arbol puede estar en un solo lado, la complejidad sera O(n),
+ siendo n la cantidad de nodos totales del arbol
+ */
+int maximo(bintree<T> const& tree) {
+
+    //Si no hay arbol, dara error
+    if (tree.empty()) throw domain_error("Empty Tree");
+    //Si el derecho esta vacio, la raiz es la mas grande
+    if (tree.right().empty()) return tree.root();
+    //Si no, sigue avanzando
+    return maximo(tree.right());
+
+    //El objetivo es llegar al nodo inferior mas a la derecha
+}
+
+template <class T>
+/*
+ Complejidad: Dado que recorre una unica vez todos los nodos del arbol, la complejidad sera O(n),
+ siendo n la cantidad de nodos totales del arbol
+ */
+bool resolver(bintree<T> const& tree, int minimo, int maximo)
+{
+    //Si esta vacio es de busqueda
+    if (tree.empty()) return true;
+
+    //Si es menor que el de la izquierda o mayor que el de la derecha, mo es de busqueda
+    if (tree.root() <= minimo || tree.root() >= maximo)
+    {
         return false;
     }
 
-    //Ahora comprobaremos cada lado, por separado
-     
-    int root = tree.root();
-    //izquierda
-    resolver(tree.left());
+    //Comprobamos que los valores no sean iguales a la raiz
+    if (!tree.left().empty() && tree.left().root() >= tree.root())
+    {
+        return false;
+    }
+    if (!tree.right().empty() && tree.right().root() <= tree.root())
+    {
+        return false;
+    }
 
-    //derecha
-    resolver(tree.right());
-
+    //Hacemos la funcion recursiva de ambos lados
+    //izquierdo && derecho
+    return resolver(tree.left(), minimo, tree.root()) &&
+        resolver(tree.right(), tree.root(), maximo);
 }
 
 
@@ -37,7 +85,16 @@ void resuelveCaso() {
     bintree<int> tree;
     tree = leerArbol(-1);
 
-    cout << resolver(tree) << endl;
+
+    bool solucion;
+    //No se donde hacerla comprobacion para que no me salte el error de arbol vacio, sin crear mas metodos
+    //Si esta vacio es de busqueda
+    if (tree.empty()) solucion = true;
+    //Si no es vacio, tenemos que analizar. Correcciones de -1 y +1 porque los valores si pueden ser tan pequeños o grandes como estos
+    else solucion = resolver(tree, minimo(tree) - 1, maximo(tree) + 1); 
+
+    //Devolvera si o no segun si es o no de busqueda
+    cout << (solucion ? "SI" : "NO") << endl;
 }
 
 
