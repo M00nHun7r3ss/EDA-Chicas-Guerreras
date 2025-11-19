@@ -1,3 +1,6 @@
+// Denisa Juarranz Berindea
+// EDA-GDV36
+
 #include <iostream>
 #include <iomanip>
 #include <fstream>
