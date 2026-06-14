@@ -1,0 +1,11 @@
+5
+a a b b c
+4
+u u u u
+6
+a b a b a b
+6
+a a g h b b
+7
+o p o r r r y
+-1

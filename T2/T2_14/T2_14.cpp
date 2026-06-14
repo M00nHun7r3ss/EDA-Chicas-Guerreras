@@ -1,37 +1,43 @@
-// Denisa Juarranz Berindea
-// EDA-GDV36
 
 #include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <vector>
+
 using namespace std;
 
 // función que resuelve el problema
-int resolver(vector<int> v, int ini, int fin) {
+int resolver(vector<int> const& v) {
 
-    int dif = fin - ini;
+    int ini = 0;
+    int fin = v.size() - 1;
 
-    //Si solo hay un elemento, devuelve ese
-    if (dif == 1) {
-        return v[ini];
+    //Caso base, un elemento. es el ultimo valor válido 
+    int res = v[0]; 
+
+    //Recorremos
+    while (ini <= fin) {
+
+        //Mitad
+        int mid = (ini + fin) / 2;
+
+        //comprobamos si en mid el vector sigue la regla de consecutividad
+        // busqueda en derecha
+        if (v[mid] == v[0] + mid) {
+
+            // si esto se cumple, significa que hasta mid la serie es correcta, y seguimos probando por la derecha para ver
+            //si se sigue cumpliando
+            res = v[mid];   
+            ini = mid + 1;  
+        }
+        //Busqueda en izquierda
+        else {
+            //Nos hemos pasado la serie asi que retrocedemos, descartando la derecha
+            fin = mid - 1;  
+        }
     }
 
-    //Buscamos la mitad
-    int mitad = (ini + fin) / 2;
-
-    //Si ha llegado aqui
-    //Segunda mitad (si la mitad y su siguiente siguen ordenados)
-    if (v[mitad] + 1 == v[mitad + 1])
-    {
-        return resolver(v, mitad, fin);
-    }
-    //Primera mitad (si a partir de la mitad no estan ordenados)
-    else
-    {
-        return resolver(v, ini, mitad);
-    }
-
+    return res;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -41,25 +47,36 @@ void resuelveCaso() {
     int n;
     cin >> n;
 
-    vector<int> sec(n);
-    for (int& e : sec) cin >> e;
+    vector<int> v(n);
 
-    // Llamada a la función resolver y solucion
-    cout << resolver(sec, 0, n) << endl;
+    for (int i = 0; i < n; i++)
+        cin >> v[i];
+
+    int sol = resolver(v);
+
+    cout << sol << "\n";
 }
 
-//#define DOMJUDGE
 int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
 #ifndef DOMJUDGE
     std::ifstream in("datos.txt");
     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
-#endif
+#endif 
+
 
     int numCasos;
     std::cin >> numCasos;
     for (int i = 0; i < numCasos; ++i)
         resuelveCaso();
 
+
+    // Para restablecer entrada. Comentar para acepta el reto
+#ifndef DOMJUDGE // para dejar todo como estaba al principio
+    std::cin.rdbuf(cinbuf);
+    system("PAUSE");
+#endif
+
+    return 0;
 }

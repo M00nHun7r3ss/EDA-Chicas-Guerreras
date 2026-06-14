@@ -1,121 +1,109 @@
-// Denisa Juarranz Berindea
-// EDA-GDV36
 
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <unordered_map>
+#include <map>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-/*
- Complejidad:
- Usare las siguientes variables para explicar la complejidad
- nEnvs (numero de envios totales. Todos los intentos de todos los equipos)
- nEqs (numero de equipos)
- nProbs (numero de problemas)
+// info de cada problema de un equipo
+struct InfoProblema {
+    int intentos = 0;     // intentos incorrectos
+    bool resuelto = false;
+};
 
-La complejidad seria en el peor caso O(nEnvs) + O(nEqs * nProbs) + O(nEqs * log nEqs) + O (nEqs)
-Leer los envios tiene una complejidad O(nEnvs) siendo n el numero de envios
-Revisar los envios y rellenar el resultado tiene una complejidad O(nEqs * nProbs)
-Ordenar los resultados tiene una complejidad O(nEqs * log nEqs)
-Escribir el resultado tiene una complejidad O(nEqs)
- */
+// info total de un equipo
+struct InfoEquipo {
+    int resueltos = 0;
+    int tiempo = 0;
+    map<string, InfoProblema> problemas;
+};
 
-void procesaEnvios(vector<pair<string, pair<int, int>>>& resultados) {
+// para ordenar la salida
+struct Resultado {
+    string nombre;
+    int resueltos;
+    int tiempo;
+};
+
+bool comparacion(Resultado const& a, Resultado const& b) {
+    if (a.resueltos != b.resueltos)
+        return a.resueltos > b.resueltos; // mas resueltos mejor
+    if (a.tiempo != b.tiempo)
+        return a.tiempo < b.tiempo; // menos tiempo mejor
+    return a.nombre < b.nombre; // orden alfabetico
+}
+
+void procesaEnvios(vector<Resultado>& resultados) {
+
+    map<string, InfoEquipo> equipos;
     string equipo, problema, veredicto;
     int minuto;
-    //Registro de toda la informacion del envio: equipo, intentos, timepo
-    unordered_map<string, unordered_map<string, pair<int, int>>> enviosEquipo;
 
-    //Leemos el equipo
     cin >> equipo;
-
-    //Si no ha llegado al final de la lista
-    //Complejidad del while O(n) siendo n el numero de envios a consultar (la suma de todos los intentos de todos los equipos)
     while (equipo != "FIN") {
-        //Leemos todos los datos de la salida del juez
         cin >> problema >> minuto >> veredicto;
 
-        //Registra por cada problema al equipo
-        unordered_map<string, pair<int, int>>& problemas = enviosEquipo[equipo];
+        InfoEquipo& eq = equipos[equipo];
+        InfoProblema& pr = eq.problemas[problema];
 
-        //Revisa los veredictos
-        //Si sale bien
+        // si ya esta resuelto, ignoramos
+        if (pr.resuelto) {
+            cin >> equipo;
+            continue;
+        }
+
         if (veredicto == "AC") {
-            // Si no hay AC previo, guardamos el minuto del primer AC
-            if (problemas[problema].second == 0) {
-                problemas[problema].second = minuto;
-            }
+            // problema resuelto
+            pr.resuelto = true;
+            eq.resueltos++;
+
+            // tiempo = minuto + penalizacion
+            eq.tiempo += minuto + pr.intentos * 20;
         }
         else {
-            // Si no se ha resuelto aún, aumentamos los intentos fallidos
-            if (problemas[problema].second == 0) {
-                problemas[problema].first++;
-            }
+            // intento incorrecto
+            pr.intentos++;
         }
-
-        //Procesa el siguiente equipo
+        
         cin >> equipo;
     }
 
-    //Revisamos los resultados para gestionar la salida y rellenar el resultado
-    //Complejidad O(n * m) siendo n el numero de equipos y m el numero de problemas de cada equipo
-    for (auto& e : enviosEquipo) {
-        int problemasResueltos = 0, tiempoTotal = 0;
-
-        //Recorremos los problemas del equipo
-        for (pair<const string, pair<int, int>>& problem : e.second) {
-
-            //Si se ha resuelto el problema
-            if (problem.second.second != 0) {
-
-                problemasResueltos++;
-                tiempoTotal += problem.second.second + 20 * problem.second.first;
-            }
-        }
-
-        //Guardamos el resultado del equipo
-        resultados.push_back({ e.first, {problemasResueltos, tiempoTotal}});
+    // construir vector de resultados
+    for (auto const& par : equipos) {
+        Resultado r;
+        r.nombre = par.first;
+        r.resueltos = par.second.resueltos;
+        r.tiempo = par.second.tiempo;
+        resultados.push_back(r);
     }
 
-   // Ordenamos por numero de problemas resueltos, menos tiempo y orden alfabetico
-   // De principio a fin, comparamos dos a dos resultado de equipo
-   // Complejidad del sort: O(n log n) siendo n el numero de resultados asociados a cada equipo
-    sort(resultados.begin(), resultados.end(), [](const pair<string, pair<int, int>>& a, const pair<string, pair<int, int>>& b) {
-        //Mayor numero de problemas resuelto
-        if (a.second.first != b.second.first)
-            return a.second.first > b.second.first;
-        //Menor tiempo necesitado
-        if (a.second.second != b.second.second)
-            return a.second.second < b.second.second;
-        //Orden alfabetico
-        return a.first < b.first; 
-    });
+    // ordenar clasificacion
+    sort(resultados.begin(), resultados.end(), comparacion);
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 void resuelveCaso() {
-    //Vector de nombre del equipo, n problemas resueltos, n minutos tiempo
-    vector<pair<string, pair<int, int>>> resultados;
-	procesaEnvios(resultados);
 
-    // Se imprime la salida: nombre del equipo, n problemas resueltos, n minutos tiempo
-    //Complejidad O(n) siendo n el numero de resultados
-    for (pair<string, pair<int, int>>& result : resultados)
-    {
-        cout << result.first << " " << result.second.first << " " << result.second.second << "\n";
+    vector<Resultado> resultados;
+
+    procesaEnvios(resultados);
+
+    // Se imprime la salida
+    for (auto const& r : resultados) {
+        cout << r.nombre << " " << r.resueltos << " " << r.tiempo << "\n";
     }
-	cout << "---\n";
+    
+    cout << "---\n";
 }
 
 int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
 #ifndef DOMJUDGE
-    std::ifstream in("datos.txt");
+    std::ifstream in("input.txt");
     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
 #endif
 

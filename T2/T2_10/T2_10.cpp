@@ -1,59 +1,50 @@
-// Denisa Juarranz Berindea
-// EDA-GDV36
-
 #include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <vector>
+
 using namespace std;
 
 // función que resuelve el problema
-int resolver(vector<int> v, int ini, int fin) {
+int resolver(vector<int> const& v, int i, int j) {
 
-    int dif = fin - ini;
-
-    //Se garantiza al menos un elemento y al menos un impar
-    if (dif == 1) {
-        return v[ini];
+    // caso base, un solo elemento
+    if (i == j) {
+        return v[i];
     }
 
-    int mitad = (ini + fin) / 2;
+    // Mitad
+    int mid = (i + j) / 2;
 
-    //Miramos si el impar esta al principio
-    if (v[ini] % 2 != 0) return v[ini];
-    //O en mitad
-    if (v[mitad] % 2 != 0) return v[mitad];
+    // buscamos en ambas mitades
+    int izq = resolver(v, i, mid);
+    int der = resolver(v, mid + 1, j);
 
-    //Vemos la diferencia, para ver si la diferencia es par entre ellas
-    int n = mitad - ini;
-    //Miramos la segunda mitad
-    if (v[mitad] == v[ini] + 2 * n)
-        return resolver(v, mitad, fin);
-    //Miramos la primera mitad
-    return resolver(v, ini, mitad);
-
+    // Solo un impar (siempre uno). Los demas son pares, asi que, o esta en la izquierda o en la derecha
+    if (izq % 2 != 0) return izq;
+    return der;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 bool resuelveCaso() {
-
-    // leer los datos de la entrada
+    //Leer numero de elementos
     int n;
     cin >> n;
 
-    if (!std::cin)
+    //Centinela
+    if (n == 0)
         return false;
 
+    //Leer y rellenar vector
     vector<int> v(n);
-    for (int& e : v) cin >> e;
 
-    // Llamada a la función resolver
-    // Mostrar el resultado
-    cout << resolver(v, 0, n) << endl;
+    for (int i = 0; i < n; i++)
+        cin >> v[i];
+
+    cout << resolver(v, 0, n - 1) << "\n";
 
     return true;
-
 }
 
 int main() {
